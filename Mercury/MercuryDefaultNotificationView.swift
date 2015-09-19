@@ -14,7 +14,7 @@ class MercuryDefaultNotificationView: MercuryNotificationView {
     private var textLabel = UILabel()
     private var colorView = UIView()
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -45,8 +45,8 @@ class MercuryDefaultNotificationView: MercuryNotificationView {
         var rightRect = CGRect()
         CGRectDivide(bounds, &leftRect, &rightRect, CGRectGetMaxX(imageView.frame), .MinXEdge)
         
-        var space: CGFloat = 20
-        var constrainedSize = CGRectInset(rightRect, (space + margin) * 0.5, 0).size
+        let space: CGFloat = 20
+        let constrainedSize = CGRectInset(rightRect, (space + margin) * 0.5, 0).size
         
         textLabel.frame.size = textLabel.sizeThatFits(constrainedSize)
         textLabel.frame.origin.x = CGRectGetMaxX(imageView.frame) + space
@@ -56,7 +56,7 @@ class MercuryDefaultNotificationView: MercuryNotificationView {
         
         // This centers the text across the whole view, unless that would cause it to block the imageView
         textLabel.center.x = CGRectGetMidX(bounds)
-        var leftBound = CGRectGetMaxX(imageView.frame) + space
+        let leftBound = CGRectGetMaxX(imageView.frame) + space
         
         if textLabel.frame.origin.x < leftBound {
             textLabel.frame.origin.x = leftBound

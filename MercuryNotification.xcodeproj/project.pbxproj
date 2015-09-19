@@ -82,10 +82,10 @@
 		6A4EF99F1B7980F600573215 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A4EF9B01B79810000573215 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		6A4EF9B21B7982AE00573215 /* Mercury.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Mercury.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6A4EF9B31B79836F00573215 /* MercuryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MercuryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A4EF9B31B79836F00573215 /* MercuryNotification.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MercuryNotification.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A4EF9B41B79837000573215 /* MercuryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MercuryTests.swift; sourceTree = "<group>"; };
 		6A4EF9B71B7983FF00573215 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
-		6A4EF9B91B79846600573215 /* MercuryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MercuryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A4EF9B91B79846600573215 /* MercuryNotification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MercuryNotification.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,8 +122,8 @@
 				6A4EF9931B7980F600573215 /* MercuryApp */,
 				6A4EF99D1B7980F600573215 /* MercuryTests */,
 				6A4EF9B21B7982AE00573215 /* Mercury.framework */,
-				6A4EF9B31B79836F00573215 /* MercuryTests.xctest */,
-				6A4EF9B91B79846600573215 /* MercuryApp.app */,
+				6A4EF9B31B79836F00573215 /* MercuryNotification.xctest */,
+				6A4EF9B91B79846600573215 /* MercuryNotification.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -145,13 +145,13 @@
 			isa = PBXGroup;
 			children = (
 				6A4EF9941B7980F600573215 /* AppDelegate.swift */,
+				6A4EF99C1B7980F600573215 /* ViewController.swift */,
 				6A4EF9951B7980F600573215 /* LaunchScreen.xib */,
 				6A4EF9971B7980F600573215 /* Main.storyboard */,
 				6A4EF9991B7980F600573215 /* Images.xcassets */,
 				6A4EF9B71B7983FF00573215 /* Default-568h@2x.png */,
-				6A4EF99A1B7980F600573215 /* Info.plist */,
 				6A4EF99B1B7980F600573215 /* notify.wav */,
-				6A4EF99C1B7980F600573215 /* ViewController.swift */,
+				6A4EF99A1B7980F600573215 /* Info.plist */,
 			);
 			path = MercuryApp;
 			sourceTree = "<group>";
@@ -179,9 +179,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		40B186151B20C88100636EEE /* Mercury */ = {
+		40B186151B20C88100636EEE /* MercuryNotifications */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 40B1862C1B20C88100636EEE /* Build configuration list for PBXNativeTarget "Mercury" */;
+			buildConfigurationList = 40B1862C1B20C88100636EEE /* Build configuration list for PBXNativeTarget "MercuryNotifications" */;
 			buildPhases = (
 				40B186111B20C88100636EEE /* Sources */,
 				40B186121B20C88100636EEE /* Frameworks */,
@@ -192,14 +192,14 @@
 			);
 			dependencies = (
 			);
-			name = Mercury;
+			name = MercuryNotifications;
 			productName = Hermes;
 			productReference = 6A4EF9B21B7982AE00573215 /* Mercury.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		40B186201B20C88100636EEE /* MercuryTests */ = {
+		40B186201B20C88100636EEE /* MercuryNotificationTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 40B1862F1B20C88100636EEE /* Build configuration list for PBXNativeTarget "MercuryTests" */;
+			buildConfigurationList = 40B1862F1B20C88100636EEE /* Build configuration list for PBXNativeTarget "MercuryNotificationTests" */;
 			buildPhases = (
 				40B1861D1B20C88100636EEE /* Sources */,
 				40B1861E1B20C88100636EEE /* Frameworks */,
@@ -210,14 +210,14 @@
 			dependencies = (
 				40B186241B20C88100636EEE /* PBXTargetDependency */,
 			);
-			name = MercuryTests;
+			name = MercuryNotificationTests;
 			productName = HermesTests;
-			productReference = 6A4EF9B31B79836F00573215 /* MercuryTests.xctest */;
+			productReference = 6A4EF9B31B79836F00573215 /* MercuryNotification.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		40B186351B20C88E00636EEE /* MercuryApp */ = {
+		40B186351B20C88E00636EEE /* MercuryNotificationApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 40B186521B20C88E00636EEE /* Build configuration list for PBXNativeTarget "MercuryApp" */;
+			buildConfigurationList = 40B186521B20C88E00636EEE /* Build configuration list for PBXNativeTarget "MercuryNotificationApp" */;
 			buildPhases = (
 				40B186321B20C88E00636EEE /* Sources */,
 				40B186331B20C88E00636EEE /* Frameworks */,
@@ -229,9 +229,9 @@
 			dependencies = (
 				24FC755E1B34BEB000F923BD /* PBXTargetDependency */,
 			);
-			name = MercuryApp;
+			name = MercuryNotificationApp;
 			productName = HermesApp;
-			productReference = 6A4EF9B91B79846600573215 /* MercuryApp.app */;
+			productReference = 6A4EF9B91B79846600573215 /* MercuryNotification.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -240,8 +240,10 @@
 		40B1860D1B20C88100636EEE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
-				ORGANIZATIONNAME = Imgur;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Chayel Heinsen";
 				TargetAttributes = {
 					40B186151B20C88100636EEE = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -256,7 +258,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 40B186101B20C88100636EEE /* Build configuration list for PBXProject "Mercury" */;
+			buildConfigurationList = 40B186101B20C88100636EEE /* Build configuration list for PBXProject "MercuryNotification" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -269,9 +271,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				40B186151B20C88100636EEE /* Mercury */,
-				40B186201B20C88100636EEE /* MercuryTests */,
-				40B186351B20C88E00636EEE /* MercuryApp */,
+				40B186151B20C88100636EEE /* MercuryNotifications */,
+				40B186201B20C88100636EEE /* MercuryNotificationTests */,
+				40B186351B20C88E00636EEE /* MercuryNotificationApp */,
 			);
 		};
 /* End PBXProject section */
@@ -348,12 +350,12 @@
 /* Begin PBXTargetDependency section */
 		24FC755E1B34BEB000F923BD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 40B186151B20C88100636EEE /* Mercury */;
+			target = 40B186151B20C88100636EEE /* MercuryNotifications */;
 			targetProxy = 24FC755D1B34BEB000F923BD /* PBXContainerItemProxy */;
 		};
 		40B186241B20C88100636EEE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 40B186151B20C88100636EEE /* Mercury */;
+			target = 40B186151B20C88100636EEE /* MercuryNotifications */;
 			targetProxy = 40B186231B20C88100636EEE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -400,6 +402,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -481,7 +484,9 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chayelheinsen.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
+				PRODUCT_NAME = Mercury;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -501,7 +506,9 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chayelheinsen.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
+				PRODUCT_NAME = Mercury;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -520,7 +527,8 @@
 				);
 				INFOPLIST_FILE = MercuryTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chayelheinsen.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = MercuryNotification;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -535,7 +543,8 @@
 				);
 				INFOPLIST_FILE = MercuryTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chayelheinsen.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = MercuryNotification;
 			};
 			name = Release;
 		};
@@ -552,7 +561,8 @@
 				INFOPLIST_FILE = "$(SRCROOT)/MercuryApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = MercuryApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chayelheinsen.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = MercuryNotification;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -566,7 +576,8 @@
 				INFOPLIST_FILE = "$(SRCROOT)/MercuryApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = MercuryApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chayelheinsen.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = MercuryNotification;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -574,7 +585,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		40B186101B20C88100636EEE /* Build configuration list for PBXProject "Mercury" */ = {
+		40B186101B20C88100636EEE /* Build configuration list for PBXProject "MercuryNotification" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				40B1862A1B20C88100636EEE /* Debug */,
@@ -583,7 +594,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		40B1862C1B20C88100636EEE /* Build configuration list for PBXNativeTarget "Mercury" */ = {
+		40B1862C1B20C88100636EEE /* Build configuration list for PBXNativeTarget "MercuryNotifications" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				40B1862D1B20C88100636EEE /* Debug */,
@@ -592,7 +603,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		40B1862F1B20C88100636EEE /* Build configuration list for PBXNativeTarget "MercuryTests" */ = {
+		40B1862F1B20C88100636EEE /* Build configuration list for PBXNativeTarget "MercuryNotificationTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				40B186301B20C88100636EEE /* Debug */,
@@ -601,7 +612,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		40B186521B20C88E00636EEE /* Build configuration list for PBXNativeTarget "MercuryApp" */ = {
+		40B186521B20C88E00636EEE /* Build configuration list for PBXNativeTarget "MercuryNotificationApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				40B186531B20C88E00636EEE /* Debug */,

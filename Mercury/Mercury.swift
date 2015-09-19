@@ -3,16 +3,16 @@ import AVFoundation
 
 @objc public protocol MercuryDelegate {
     /**
-    :param: mercury The Mercury instance
-    :param: notification the notification being made
-    :returns: the notification view, or nil to use MercuryDefaultNotificationView
+    - parameter mercury: The Mercury instance
+    - parameter notification: the notification being made
+    - returns: the notification view, or nil to use MercuryDefaultNotificationView
     */
-    optional func mercuryNotificationViewForNotification(#mercury: Mercury, notification: MercuryNotification) -> MercuryNotificationView?
+    optional func mercuryNotificationViewForNotification(mercury mercury: Mercury, notification: MercuryNotification) -> MercuryNotificationView?
     
     /**
-    :param: mercury The Mercury instance
-    :param: explicit is true if the user closed the bulletin with their finger, instead of relying on autoclose
-    :param: notification the notification that was showing when Mercury was closed
+    - parameter mercury: The Mercury instance
+    - parameter explicit: is true if the user closed the bulletin with their finger, instead of relying on autoclose
+    - parameter notification: the notification that was showing when Mercury was closed
     */
     optional func mercuryDidClose(mercury: Mercury, explicit: Bool, notification: MercuryNotification)
 }
@@ -71,7 +71,7 @@ public class Mercury: NSObject, MercuryBulletinViewDelegate {
     /**
     Give Mercury one notification to post. If waiting == false, you'll see this notification right away
     
-    :param: notification The notification you want Mercury to post
+    - parameter notification: The notification you want Mercury to post
     */
     public func postNotification(notification: MercuryNotification) {
         postNotifications([notification])
@@ -80,7 +80,7 @@ public class Mercury: NSObject, MercuryBulletinViewDelegate {
     /**
     Give Mercury an array of notifications to post. If waiting == false, you'll see these notifications right away
     
-    :param: notifications The notifications you want Mercury to post
+    - parameter notifications: The notifications you want Mercury to post
     */
     public func postNotifications(notifications: [MercuryNotification]) {
         self.notifications += notifications
@@ -117,7 +117,7 @@ public class Mercury: NSObject, MercuryBulletinViewDelegate {
     public func containsNotification(notification: MercuryNotification) -> Bool {
         
         if let bulletinView = self.bulletinView {
-            return contains(bulletinView.notifications, notification)
+            return bulletinView.notifications.contains(notification)
         }
         
         return false
@@ -153,9 +153,9 @@ public class Mercury: NSObject, MercuryBulletinViewDelegate {
     }
     
     // Initial setup
-    func prepareSound(#path: String) {
-        var sound = NSURL(fileURLWithPath: path)
-        audioPlayer = AVAudioPlayer(contentsOfURL: sound, error: nil)
+    func prepareSound(path path: String) {
+        let sound = NSURL(fileURLWithPath: path)
+        audioPlayer = try? AVAudioPlayer(contentsOfURL: sound)
         audioPlayer!.prepareToPlay()
     }
     
