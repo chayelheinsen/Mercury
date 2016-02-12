@@ -6,14 +6,14 @@
 Mercury shows all queued up notifications at once, with an easy way to swipe through them (and will animate through them automatically if you don't touch any notifications for 3 seconds)
 
 ##Installation
-###Cocoapods Installation
+###CocoaPods Installation
 Mercury is available on CocoaPods. Just add the following to your project Podfile:
 
 ```
 pod 'Mercury'
 ```
 
-###Non-Cocoapods Installation
+###Non-CocoaPods Installation
 You can drop Mercury files directly into your project, or drag the Mercury project into your workspace.
 
 ###Usage
